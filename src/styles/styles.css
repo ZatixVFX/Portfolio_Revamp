@@ -1,0 +1,336 @@
+.landing-page-bg {
+  background-color: #96b27d;
+}
+
+.line-height {
+  line-height: 28px;
+}
+
+.activeMenuM {
+  background-color: #96b27d;
+  color: black;
+}
+.activeMenuM:hover {
+  background-color: #96b27d !important;
+  color: white !important;
+}
+
+@media screen and (max-width: 1024px) and (max-width: 1440px) and (max-width: 1920px) {
+  .header-title {
+    padding-top: 1rem;
+  }
+
+  .horizontal-line {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 47em;
+    margin: 0 auto;
+    background-image: linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -ms-linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      right bottom,
+      color-stop(3.02, white),
+      color-stop(0.5, gray),
+      color-stop(-4.02, white)
+    );
+  }
+  .img-size {
+    height: 273px !important;
+    width: 476px;
+  }
+  .work-body-spacing {
+    padding-bottom: 0rem !important;
+  }
+
+  .owl-carousel-item-img {
+    max-width: 25% !important;
+    max-height: 15% !important;
+    margin-left: 6.1rem !important;
+    margin-top: 3rem;
+  }
+
+  .owl-carousel-item-img-Jason {
+    max-width: 25% !important;
+    max-height: 26% !important;
+    margin-left: 6.1rem !important;
+    margin-top: 4.3rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 5.7rem;
+    margin-left: -20px;
+    left: 0rem;
+    display: block !important;
+  }
+
+  .owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 5rem;
+    right: 0rem;
+    display: block !important;
+  }
+
+  .owl-nav [class*="owl-"]:hover {
+    background: none !important;
+    color: rgb(74, 74, 74) !important;
+    text-decoration: none;
+  }
+
+  .footer-padding {
+    padding: 3rem 1.5rem 0rem !important;
+  }
+
+  .navbar.is-active {
+    background: #c98642;
+  }
+
+  .image .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #fff;
+  }
+  .image:hover .after {
+    display: block !important;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .card-image:hover .image {
+    overflow: hidden;
+  }
+
+  .button-hover:hover {
+    background: transparent !important;
+    color: #fff !important;
+  }
+
+  .img-overlay {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.image-box img {
+  transition: all 0.3s;
+  transform: scale(1);
+}
+
+.image-box:hover img {
+  display: block;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1920px) {
+  .is-8-1920px {
+    width: 82.66667% !important;
+  }
+
+  .about-me-subtitle {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 415;
+    line-height: 1.25;
+  }
+
+  .header-title {
+    padding-top: 1rem;
+  }
+
+  .horizontal-line {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 47em;
+    margin: 0 auto;
+    background-image: linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -ms-linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      right bottom,
+      color-stop(3.02, white),
+      color-stop(0.5, gray),
+      color-stop(-4.02, white)
+    );
+  }
+  .img-size {
+    height: 273px !important;
+    width: 476px;
+  }
+  .work-body-spacing {
+    padding-bottom: 0rem !important;
+  }
+
+  .owl-carousel-item-img {
+    max-width: 25% !important;
+    max-height: 15% !important;
+  }
+
+  .owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 5.7rem;
+    margin-left: -20px;
+    left: 0rem;
+    display: block !important;
+  }
+
+  .owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 5rem;
+    right: 0rem;
+    display: block !important;
+  }
+
+  .owl-nav [class*="owl-"]:hover {
+    background: none !important;
+    color: rgb(74, 74, 74) !important;
+    text-decoration: none;
+  }
+
+  .footer-padding {
+    padding: 3rem 1.5rem 0rem !important;
+  }
+
+  .navbar.is-active {
+    background: #c98642;
+  }
+
+  .image .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #fff;
+  }
+  .image:hover .after {
+    display: block !important;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .card-image:hover .image {
+    overflow: hidden;
+  }
+
+  .button-hover:hover {
+    background: transparent !important;
+    color: #fff !important;
+  }
+
+  .img-overlay {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img-size {
+    height: 273px !important;
+    width: 476px;
+  }
+
+  .is-8-768px {
+    width: 103.66667% !important;
+  }
+}
+
+.container-1 {
+  position: relative;
+  margin-bottom: -6rem;
+  margin-left: 4rem;
+}
+
+.container-1 .fa-hands {
+  display: block;
+}
+
+.container-1 .fa-heart {
+  position: absolute;
+  bottom: 57px;
+  left: 16px;
+}
+
+@media screen and (min-width: 375px) {
+  .horizontal-line {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 36em;
+    margin: 0 auto;
+    background-image: linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -ms-linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      right bottom,
+      color-stop(3.02, white),
+      color-stop(0.5, gray),
+      color-stop(-4.02, white)
+    );
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .horizontal-line {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 47em;
+    margin: 0 auto;
+    background-image: linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -ms-linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      right bottom,
+      color-stop(3.02, white),
+      color-stop(0.5, gray),
+      color-stop(-4.02, white)
+    );
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .horizontal-line {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 36em;
+    margin: 0 auto;
+    background-image: linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -ms-linear-gradient(to left, white 2%, #e6e6e6 50%, white 98%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      right bottom,
+      color-stop(3.02, white),
+      color-stop(0.5, gray),
+      color-stop(-4.02, white)
+    );
+  }
+}
+
+.hero.is-fullheight-style {
+  padding: 8rem 9.5rem !important;
+}
+
+.hero.is-fullheight-style-hobbies {
+  padding: 7rem 6.5rem !important;
+}
+
+.hero.is-medium-style {
+  padding: 1rem 11.5rem !important;
+}
