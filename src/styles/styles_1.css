@@ -1,0 +1,310 @@
+/* navbar styles */
+
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#navbar > ul > li > a {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-link:hover {
+  color: #30302f !important;
+}
+/* wavy Text */
+.wave-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.wave {
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* typewriter animation */
+/* DEMO-SPECIFIC STYLES */
+.typewriter > .text_1 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  /*letter-spacing: 0.15em; /* Adjust as needed */ /* for small column */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end 3.54;
+}
+.typewriter > .text_2 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  visibility: hidden;
+  width: 44rem;
+  border-right: 0.15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  /*letter-spacing: 0.15em; /* Adjust as needed */ /* for small column */
+  animation: visibility 3.5s ease 0s 1 normal forwards,
+    typing-2 3.5s steps(30, end), blink-caret 0.5s step-end infinite normal;
+  animation-delay: 2.3s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes typing-2 {
+  from {
+    max-width: 0%;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes visibility {
+  from,
+  to {
+    visibility: visible;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.section_divider {
+  padding-top: 17rem !important;
+  padding-bottom: 17rem !important;
+}
+
+.landing-pg-bg-img {
+  background: url("/src/resources/images/LandingPage/CapeTown_Beach-size-large.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.cover-layer {
+  background: black;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url("/src/resources/Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: montserrat semi-bold;
+  src: url("/src/resources/Fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: montserrat extra-bold;
+  src: url("/src/resources/Fonts/Montserrat/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: Hind Madurai Light;
+  src: url("/src/resources/Fonts/Hind_Madurai/HindMadurai-Light.ttf");
+}
+
+@font-face {
+  font-family: Hind Madurai-Medium;
+  src: url("/src/resources/Fonts/Hind_Madurai/HindMadurai-Medium.ttf");
+}
+
+.header {
+  font-family: montserrat;
+  font-weight: bolder;
+  font-size: 59px;
+}
+
+.sub-header {
+  font-family: Hind Madurai light;
+  font-size: 33px;
+}
+
+.nav-item > a {
+  font-family: montserrat;
+  font-size: 22px;
+  color: white;
+}
+
+.nav-item > a:hover {
+  color: white !important;
+}
+
+.junaid-salie {
+  color: white;
+  font-family: montserrat semi-bold;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 0 !important;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191;
+}
+
+:root {
+  --first: hsla(207, 9%, 51%);
+  --second: hsla(207, 13%, 65%);
+  --third: hsla(208, 18%, 81%);
+}
+.about-me-img {
+  width: 500px;
+  height: 450px;
+  -webkit-box-shadow: 7px 7px 0px 0px var(--first),
+    8px 8px 0px 0px var(--second), 9px 9px 0px 0px var(--third);
+  box-shadow: 7px 7px 0px 0px var(--first), 8px 8px 0px 0px var(--second),
+    9px 9px 0px 0px var(--third);
+}
+
+.pg-header {
+  font-family: montserrat extra-bold;
+  font-size: 54px;
+}
+
+.hobbies {
+  font-size: 26px;
+  font-family: montserrat semi-bold;
+}
+
+.about-me {
+  font-size: 18.1px;
+  font-family: Hind Madurai Light;
+  line-height: 1.7;
+}
+
+.hobby {
+  font-size: 22px;
+  font-family: Hind Madurai Light;
+}
+
+.skills-header {
+  font-family: montserrat semi-bold;
+  font-size: 25px;
+}
+
+.progress-bar {
+  font-family: Hind Madurai Light;
+  font-size: 18px;
+}
+
+.progress {
+  height: 25px;
+  width: 100%;
+  background-color: #ebeced;
+  /*border-radius: 0rem !important;*/
+}
+
+.bg-transparent {
+  background-color: transparent;
+  transition: background-color 0.25s linear;
+}
+
+.skills-img {
+  padding-top: 0.7rem;
+  padding-right: 1rem;
+  width: 90px;
+  height: 62px;
+}
+
+.progressbar-percentage {
+  font-family: Hind Madurai-Medium;
+}
+
+.projects {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 380px;
+  height: 250px;
+  animation: boxShadowEnd 0.3s forwards;
+}
+
+.projects:hover {
+  animation: boxShadowStart 0.3s forwards;
+}
+
+@keyframes boxShadowStart {
+  to {
+    box-shadow: 7px 7px 0px 0px var(--first), 8px 8px 0px 0px var(--second),
+      9px 9px 0px 0px var(--third);
+  }
+}
+
+@keyframes boxShadowEnd {
+  from {
+    box-shadow: 7px 7px 0px 0px var(--first), 8px 8px 0px 0px var(--second),
+      9px 9px 0px 0px var(--third);
+  }
+  to {
+    box-shadow: 0px 0px 0px 0px var(--first);
+  }
+}
+
+.projects:hover img {
+  transform: scale(1.1);
+}
+.text-transition {
+  transition: all 0.3s;
+  padding-top: 6rem;
+  font-size: 40px;
+}
+
+.text-transition:hover {
+  transform: scale(1.1);
+}
+
+.projects > img {
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.projects:hover .project-overlay {
+  display: block !important;
+  background: rgba(0, 0, 0, 0.8);
+}
