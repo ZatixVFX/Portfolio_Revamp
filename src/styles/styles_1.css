@@ -147,6 +147,11 @@
   src: url("/src/resources/Fonts/Hind_Madurai/HindMadurai-Medium.ttf");
 }
 
+@font-face {
+  font-family: Lora;
+  src: url("/src/resources/Fonts/Lora/static/Lora-Regular.ttf");
+}
+
 .header {
   font-family: montserrat;
   font-weight: bolder;
@@ -156,6 +161,23 @@
 .sub-header {
   font-family: Hind Madurai light;
   font-size: 33px;
+}
+
+.testimonials-sub-header {
+  font-family: Lora;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.card-body > h1 {
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card-body > p {
+  font-family: Hind Madurai light;
+  font-size: 15px;
 }
 
 .nav-item > a {

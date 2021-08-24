@@ -1,8 +1,6 @@
 import React from "react";
 
 // Images
-import Image from "../../../resources/images/About-me/About-me-img_1.jpg";
-
 import WebDesignEndOfModuleProject from "../../../resources/images/projects/web-design-end-of-module-project.png";
 import GithubFinderProject from "../../../resources/images/projects/github-finder-react-project.png";
 import ContactKeeperProject from "../../../resources/images/projects/contact-keeper-react-project.png";
@@ -67,13 +65,6 @@ const Work = () => {
       </div>
     </section>
   );
-};
-
-const gridstyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(2, 1fr)",
-  rowGap: "1rem",
-  columnGap: "2.5rem",
 };
 
 export default Work;

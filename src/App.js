@@ -32,8 +32,8 @@ function App() {
         <About />
         <Skills />
         <Work />
-        {/*
         <Testimonials />
+        {/*
         <Contact />
   */}
       </Fragment>
