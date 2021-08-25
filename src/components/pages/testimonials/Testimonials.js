@@ -2,11 +2,11 @@ import React from "react";
 
 const Testimonials = ({ item }) => {
   return (
-    <div className="col">
+    <div className="col-5">
       <div className="card">
         <img
           src={item.img}
-          style={{ width: "300px", height: "300px" }}
+          style={{ width: "400px", height: "300px" }}
           alt={item.name}
           className="card-img-top"
         />
