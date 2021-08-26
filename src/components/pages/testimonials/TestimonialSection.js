@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "3d-react-carousal";
 
 import { testimonialList } from "./TestimonialsList";
@@ -20,13 +20,13 @@ const TestimonialSection = () => {
   const rightFirst = {
     marginRight: "-26%",
     zIndex: 0,
-    height: "380px",
+    height: "450px",
   };
 
   const rightSecond = {
     marginRight: "-9%",
     zIndex: -1,
-    height: "450px",
+    height: "380px",
   };
 
   const getIndex = (index) => {
@@ -40,12 +40,28 @@ const TestimonialSection = () => {
       return rightSecond;
     }
   };
+  const [cardList, setCardList] = useState(0);
+  const nextBtn = () => {
+    cardList === testimonialList.length - 1
+      ? setCardList(0)
+      : setCardList(cardList + 1);
+    console.log(cardList);
+  };
+
+  const prevBtn = () => {
+    cardList === 0
+      ? setCardList(testimonialList.length - 1)
+      : setCardList(cardList - 1);
+    console.log(cardList);
+  };
   return (
     <section className="container">
       <h1 className="text-center pg-header pt-4 pb-1">Testimonials</h1>
       <p className="text-center testimonials-sub-header pb-1">
         Here's what my peers has to say about me
       </p>
+      <button onClick={nextBtn}>Next</button>
+      <button onClick={prevBtn}>Prev</button>
       <div className="row justify-content-center">
         {[...Array(5)].map((item, index) =>
           index === 2 ? (
@@ -53,27 +69,10 @@ const TestimonialSection = () => {
               className="row justify-content-center"
               style={{ position: "absolute", zIndex: "2" }}
             >
-              <div className="col-4" key={index}>
-                <div className="card">
-                  <img
-                    src="https://www.solidbackgrounds.com/images/1280x720/1280x720-wood-brown-solid-color-background.jpg"
-                    style={{ width: "100%", height: "300px" }}
-                    alt="random pic"
-                    className="card-img-top"
-                  />
-                  <div className="card-body text-center">
-                    <h1 className="card-title">Title</h1>
-                    <p className="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Cras blandit ipsum vitae turpis blandit, auctor eleifend
-                      dolor tincidunt. Nam maximus libero vitae ullamcorper
-                      bibendum. Duis id orci fermentum, sollicitudin neque sed,
-                      accumsan elit. Suspendisse tortor ex, aliquet ut finibus
-                      aliquam, pretium quis felis.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              {testimonialList.map(
+                (item, index) =>
+                  index === cardList && <Testimonials item={item} />
+              )}
             </div>
           ) : (
             <div
@@ -87,28 +86,7 @@ const TestimonialSection = () => {
               style={getIndex(index)}
               key={index}
             >
-              <div className="card" style={{ height: "inherit" }}>
-                <img
-                  src="https://picsum.photos/200/300"
-                  style={{
-                    width: "100%",
-                    height: "300px",
-                  }}
-                  alt="random pic"
-                  className="card-img-top"
-                />
-                <div className="card-body text-center">
-                  <h1 className="card-title">Title</h1>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Cras blandit ipsum vitae turpis blandit, auctor eleifend
-                    dolor tincidunt. Nam maximus libero vitae ullamcorper
-                    bibendum. Duis id orci fermentum, sollicitudin neque sed,
-                    accumsan elit. Suspendisse tortor ex, aliquet ut finibus
-                    aliquam, pretium quis felis.
-                  </p>
-                </div>
-              </div>
+              <div className="card" style={{ height: "inherit" }}></div>
             </div>
           )
         )}
