@@ -12,6 +12,9 @@ import Contact from "./components/pages/Contact";
 
 //import "./bulma-0.9.0/css/bulma.css";
 //import "bulma-tooltip/dist/css/bulma-tooltip.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // Animate on scroll
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,9 +36,7 @@ function App() {
         <Skills />
         <Work />
         <Testimonials />
-        {/*
         <Contact />
-  */}
       </Fragment>
     </Router>
   );

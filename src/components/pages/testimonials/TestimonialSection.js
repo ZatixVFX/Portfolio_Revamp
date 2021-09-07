@@ -1,58 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { Carousel } from "3d-react-carousal";
+import Slider from "react-slick";
 
 import { testimonialList } from "./TestimonialsList";
 import Testimonials from "./Testimonials";
 
 const TestimonialSection = () => {
-  const leftFirst = {
-    marginRight: "-23%",
-    zIndex: 0,
-    height: "380px",
+  const CustomArrow = (props) => {
+    const { className, style, onClick, customClass } = props;
+    return (
+      <button
+        type="button"
+        className={`${className} ${customClass}`}
+        style={{ ...style }}
+        onClick={onClick}
+      />
+    );
   };
 
-  const leftSecond = {
-    marginRight: "9%",
-    zIndex: 1,
-    height: "450px",
-  };
-
-  const rightFirst = {
-    marginRight: "-26%",
-    zIndex: 0,
-    height: "450px",
-  };
-
-  const rightSecond = {
-    marginRight: "-9%",
-    zIndex: -1,
-    height: "380px",
-  };
-
-  const getIndex = (index) => {
-    if (index === 0) {
-      return leftFirst;
-    } else if (index === 1) {
-      return leftSecond;
-    } else if (index === 3) {
-      return rightFirst;
-    } else if (index === 4) {
-      return rightSecond;
-    }
-  };
-  const [cardList, setCardList] = useState(0);
-  const nextBtn = () => {
-    cardList === testimonialList.length - 1
-      ? setCardList(0)
-      : setCardList(cardList + 1);
-    console.log(cardList);
-  };
-
-  const prevBtn = () => {
-    cardList === 0
-      ? setCardList(testimonialList.length - 1)
-      : setCardList(cardList - 1);
-    console.log(cardList);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    adaptiveHeight: true,
+    nextArrow: <CustomArrow customClass="fas fa-chevron-right" />,
+    prevArrow: <CustomArrow customClass="fas fa-chevron-left" />,
   };
   return (
     <section className="container">
@@ -60,36 +33,14 @@ const TestimonialSection = () => {
       <p className="text-center testimonials-sub-header pb-1">
         Here's what my peers has to say about me
       </p>
-      <button onClick={nextBtn}>Next</button>
-      <button onClick={prevBtn}>Prev</button>
-      <div className="row justify-content-center">
-        {[...Array(5)].map((item, index) =>
-          index === 2 ? (
-            <div
-              className="row justify-content-center"
-              style={{ position: "absolute", zIndex: "2" }}
-            >
-              {testimonialList.map(
-                (item, index) =>
-                  index === cardList && <Testimonials item={item} />
-              )}
-            </div>
-          ) : (
-            <div
-              className={`col-4 ${
-                index === 0 || index === 4
-                  ? "mt-5"
-                  : index === 1 || index === 3
-                  ? "mt-3"
-                  : ""
-              }`}
-              style={getIndex(index)}
-              key={index}
-            >
-              <div className="card" style={{ height: "inherit" }}></div>
-            </div>
-          )
-        )}
+      <div className="container">
+        <div className="row">
+          <Slider {...settings}>
+            {testimonialList.map((item, index) => (
+              <Testimonials item={item} key={index} />
+            ))}
+          </Slider>
+        </div>
       </div>
     </section>
   );

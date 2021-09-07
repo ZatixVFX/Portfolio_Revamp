@@ -177,7 +177,7 @@
 
 .card-body > p {
   font-family: Hind Madurai light;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -330,4 +330,14 @@
 .projects:hover .project-overlay {
   display: block !important;
   background: rgba(0, 0, 0, 0.8);
+}
+
+.slick-prev::before {
+  font-family: "Font Awesome 5 Free";
+  color: black;
+}
+
+.slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  color: black;
 }
